@@ -1,12 +1,14 @@
 /*
- * Force AAC 140 — Morphe patch
+ * Force audio format 140 — Morphe patch (FIXED)
  *
- * Put this file in:
+ * FIX: patch was "universal" (no compatiblePackages) but default = true, which
+ * Morphe's loader rejects — checkUniversalPatchDefaults() throws PatchException
+ * ("Universal patches must be declared with default false"), the whole bundle
+ * fails to load, and Manager shows 0 patches. Declaring compatibleWith(YouTube)
+ * makes it a non-universal patch, so default = true is allowed.
+ *
+ * Target path:
  *   patches/src/main/kotlin/app/morphe/patches/youtube/video/quality/ForceAudioFormatPatch.kt
- *
- * It reuses the already-maintained adaptive-formats hook (videoFormatPatch), so
- * there is no new fingerprint to reverse engineer. That hook is the same one
- * PrioritizeVideoQualityPatch uses.
  */
 
 package app.morphe.patches.youtube.video.quality
@@ -15,6 +17,7 @@ import app.morphe.patcher.patch.patch
 import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
+import app.morphe.patches.youtube.shared.Constants.COMPATIBILITY_YOUTUBE
 import app.morphe.patches.youtube.video.format.hookAdaptiveFormat
 import app.morphe.patches.youtube.video.format.videoFormatPatch
 
@@ -26,6 +29,9 @@ val forceAudioFormatPatch = patch(
     description = "Adds an option to force the audio-only stream to itag 140 " +
             "(AAC-LC 128 kbps) instead of the codec and bitrate YouTube picks by itself."
 ) {
+    // Required: a patch with no compatible packages and default = true fails to load.
+    compatibleWith(COMPATIBILITY_YOUTUBE)
+
     dependsOn(
         sharedExtensionPatch,
         settingsPatch,
