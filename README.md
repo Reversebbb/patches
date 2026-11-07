@@ -35,9 +35,9 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 ## 🩹 Patches list
 
 <!-- PATCHES_START -->
-> **[v2.1.0](https://github.com/MorpheApp/morphe-patches/releases/tag/v2.1.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;200 patches total
+> **[v2.1.1](https://github.com/Reversebbb/patches/releases/tag/v2.1.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;201 patches total
 <details>
-<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;113 patches</summary>
+<summary>📦 YouTube&nbsp;&nbsp;•&nbsp;&nbsp;114 patches</summary>
 <br>
 
 **🎯 Supported versions:**
@@ -92,6 +92,7 @@ All modifications made by Morphe, along with their dates, can be found in the Gi
 | [Feed video actions](#feed-video-actions) | Adds a Watch later button to video thumbnails in feeds, and opens the video menu by tapping and holding anywhere on a video. |  |
 | [Feed view count](#feed-view-count) | Adds the view count to the bottom left of the thumbnails of feed videos. |  |
 | [Force animations](#force-animations) | Adds an option to always turn on or off the app animations that YouTube can turn off, such as the player transitions. |  |
+| [Force audio format 140](#force-audio-format-140) | Adds an option to force the audio-only stream to itag 140 (AAC-LC 128 kbps) instead of the codec and bitrate YouTube picks by itself. |  |
 | [Force fullscreen landscape](#force-fullscreen-landscape) | Adds an option to rotate the player to landscape when entering fullscreen mode on tablets and other large screen devices. |  |
 | [Force original audio](#force-original-audio) | Adds an option to always use the original audio track. |  |
 | [Fullscreen video scale](#fullscreen-video-scale) | Adds options to stretch or zoom videos to fill the screen in fullscreen mode. |  |

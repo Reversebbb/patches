@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/Reversebbb/patches/compare/v2.1.0...v2.1.1) (2026-11-07)
+
+### 🐛 Bug Fixes
+
+* declare YouTube compatibility so bundle loads ([ca0395a](https://github.com/Reversebbb/patches/commit/ca0395ad3e54fefbe139335c3a26d9a5bfd329c3))
+* drop signature key ([3602ce4](https://github.com/Reversebbb/patches/commit/3602ce4bc9666dabe72f8cb37d2903a75fdda254))
+
 ## [2.1.0](https://github.com/MorpheApp/morphe-patches/compare/v2.0.0...v2.1.0) (2026-11-06)
 
 ### ✨ New Features
